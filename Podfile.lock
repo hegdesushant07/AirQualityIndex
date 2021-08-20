@@ -1,0 +1,23 @@
+PODS:
+  - DSFSparkline (4.1.2):
+    - DSFSparkline/Core (= 4.1.2)
+  - DSFSparkline/Core (4.1.2)
+
+DEPENDENCIES:
+  - DSFSparkline (from `https://github.com/dagronf/DSFSparkline/`)
+
+EXTERNAL SOURCES:
+  DSFSparkline:
+    :git: https://github.com/dagronf/DSFSparkline/
+
+CHECKOUT OPTIONS:
+  DSFSparkline:
+    :commit: 7847d7c2ada45f74af66618f77c489fd72eab122
+    :git: https://github.com/dagronf/DSFSparkline/
+
+SPEC CHECKSUMS:
+  DSFSparkline: 5afb02975d7c9f4acc4a94fbdf774796124d6b67
+
+PODFILE CHECKSUM: f4de72407860d3c48a22ee75c17cfc9bd7b9e8d7
+
+COCOAPODS: 1.9.3

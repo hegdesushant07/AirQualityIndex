@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Aqi City DetailsVC-->
+        <scene sceneID="ePN-kE-oPx">
+            <objects>
+                <viewController storyboardIdentifier="AqiCityDetailsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lS3-Gi-oiG" customClass="AqiCityDetailsVC" customModule="AirQualityIndex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PfH-Yb-D0m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kae-k5-dxE">
+                                <rect key="frame" x="177" y="64" width="21" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AQI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIb-7u-gpV">
+                                <rect key="frame" x="168.5" y="164" width="38.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOI-VG-Rf5">
+                                <rect key="frame" x="0.0" y="606.5" width="375" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z1D-ov-2NX" customClass="DSFSparklineLineGraphView" customModule="DSFSparkline">
+                                <rect key="frame" x="8" y="358.5" width="359" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="SLJ-j2-NYS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gve-Px-32X"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PIb-7u-gpV" firstAttribute="top" secondItem="Kae-k5-dxE" secondAttribute="bottom" constant="42.5" id="2Ko-88-Msj"/>
+                            <constraint firstItem="iOI-VG-Rf5" firstAttribute="top" secondItem="z1D-ov-2NX" secondAttribute="bottom" constant="48" id="6sv-65-GRI"/>
+                            <constraint firstItem="Gve-Px-32X" firstAttribute="bottom" secondItem="iOI-VG-Rf5" secondAttribute="bottom" constant="40" id="HCr-cf-l9U"/>
+                            <constraint firstItem="Gve-Px-32X" firstAttribute="trailing" secondItem="z1D-ov-2NX" secondAttribute="trailing" constant="8" id="Krl-U6-aQF"/>
+                            <constraint firstItem="Kae-k5-dxE" firstAttribute="centerX" secondItem="Gve-Px-32X" secondAttribute="centerX" id="XGz-gm-53h"/>
+                            <constraint firstItem="PIb-7u-gpV" firstAttribute="centerX" secondItem="Kae-k5-dxE" secondAttribute="centerX" id="dSU-7o-1me"/>
+                            <constraint firstItem="z1D-ov-2NX" firstAttribute="leading" secondItem="Gve-Px-32X" secondAttribute="leading" constant="8" id="i6s-6k-8hr"/>
+                            <constraint firstItem="iOI-VG-Rf5" firstAttribute="leading" secondItem="PfH-Yb-D0m" secondAttribute="leading" id="jBu-bd-ASf"/>
+                            <constraint firstItem="Kae-k5-dxE" firstAttribute="top" secondItem="Gve-Px-32X" secondAttribute="top" constant="64" id="l5Q-WD-Su5"/>
+                            <constraint firstAttribute="trailing" secondItem="iOI-VG-Rf5" secondAttribute="trailing" id="o6Q-Y0-hT7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="aqiLbl" destination="Kae-k5-dxE" id="Hy4-4f-PKp"/>
+                        <outlet property="attributedStringSupportLabel" destination="iOI-VG-Rf5" id="dpY-eP-eZL"/>
+                        <outlet property="sparkLineGraph" destination="z1D-ov-2NX" id="8KV-x9-JeJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2mu-Ez-pQi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-36" y="-234"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
